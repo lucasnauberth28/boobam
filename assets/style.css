@@ -1,0 +1,365 @@
+@import url('https://fonts.cdnfonts.com/css/circular-std');
+
+:root{
+    --primary-color: #0B0C0C;
+    --secondary-color: #59595C;
+
+    --secondary-mush: #F2F2F2;
+
+    --font: 'circular std', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+    color: var(--primary-color);
+}
+
+body ::selection, html ::selection {
+    background: var(--bs-bof-yellow, #ffd400);
+    color: var(--bs-bof-black, #0b0c0c);
+}
+
+.title{
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.link{
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.link:hover{
+    color: var(--secondary-color);
+}
+
+body::-webkit-scrollbar{
+    width: 8px;
+    padding: 2px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #fff;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #FFD500;
+    border-radius: 2px;
+}
+
+.gray-align{
+    background: #C1C0C2;
+    height: 23.75rem;
+}
+
+header h2, footer h2{
+    color: #fff;
+    font-size: 80px;
+    font-weight: 800;
+}
+
+main{
+    margin: 10rem 0;
+    gap: 9rem;
+}
+
+/* coleções */
+.title_collection{
+    font-size: 5rem;
+    width: 22.5625rem;
+    letter-spacing: -0.20rem;
+    font-weight: 800;
+    line-height: 5rem;
+    color: #fff;
+}
+
+.metadata{
+    color: #fff;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: 1rem;
+    letter-spacing: 0.0075rem;
+}
+
+.collection{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: .5rem;
+    height: 28.12rem;
+    position: relative;
+}
+
+.torrinha{
+    background-image: url('../assets/img/torrinha/torrinha.svg');
+}
+
+.paola{
+    background-image: url('../assets/img/paola/paola.svg');
+    height: 39rem;
+    background-position: bottom;
+}
+
+.item-elevate{
+    z-index: 2;
+}
+
+.sombra{
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.02) 20.11%, rgba(0, 0, 0, 0.08) 42.6%, rgba(0, 0, 0, 0.18) 62.44%, rgba(0, 0, 0, 0.30) 94.2%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+}
+
+.white-btn{
+    background: #fff;
+    border: 1px solid #E3E7E8;
+    font-size: 16px;
+    font-weight: 450;
+    color: var(--primary-color);
+    padding: 0.875rem 1.5rem;
+    border-radius: .5rem;
+}
+
+.white-btn:focus{
+    box-shadow: none;
+}
+
+/* carousel */
+.swiper-button-next, .swiper-button-prev {
+    position: unset;
+    display: flex;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.75rem;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 2.54544rem;
+    border: 1px solid var(--secondary-stroke, #E3E7E8);
+    background: var(--primary-white, #FFF);
+
+    box-shadow: 4px 4px 60px 0px rgba(0, 0, 0, 0.12);
+}
+
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 1rem;
+    color: var(--primary-color);
+}
+
+.swiper-slide{
+    display: flex;
+    min-width: 19.875rem;
+    width: auto !important;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+}
+
+.product_thumb{
+    width: 100%;
+    height: fit-content;
+    border-radius: 0.5rem;
+    background: var(--secondary-mush);
+    clip-path: border-box; 
+}
+
+.title_product{
+    color: var(--primary-color);
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.25rem;
+    letter-spacing: -0.00875rem;
+}
+
+.brand_product, .price_product{
+    color: var(--secondary-color);
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: 0.0075rem;
+}
+
+.fav, .fav_check{
+    color: var(--secondary-color);
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 85%;
+    top: 5%;
+    cursor: pointer;
+    font-weight: 100;
+    font-variation-settings: 'wght' 200;
+}
+
+.fav_check{
+    font-variation-settings: 'FILL' 1;
+}
+
+footer{
+    border-top: 1px solid rgba(0, 0, 0, 0.02);
+    height: 100%;
+    padding-top: var(--footer-pt, 5rem);
+}
+
+footer h2{
+    font-size: 56px;
+}
+
+.footer-title{
+    text-transform:uppercase;
+    font-size: .625rem;
+    line-height: 1.125rem;
+    letter-spacing: .2em;
+    margin-bottom: 0;
+}
+
+.footer-list{
+    list-style: none;
+    padding-left: 0;
+    font-size: var(--infolink-fz, 1.5rem);
+}
+
+.footer-list li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.media i{
+    cursor: pointer;
+}
+
+.media i:hover{
+    color: #FFD500;
+}
+
+.copyright p, .copyright span{
+    font-size: .625rem;
+}
+
+.boo-container{
+    width: 100%;
+    padding-right: var(--bs-gutter-x, 0.75rem);
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .boo-container{
+        --bs-gutter-x: 1rem;
+    }
+}
+
+@media (max-width: 576px){
+    .row-cols-sm-3 div:nth-child(3){
+        margin-top: 1.5rem;
+    }
+
+    .price_product{
+        margin-top: 0 !important;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .footer-info{
+        display: flex;
+    }
+
+    .footer-info div:nth-child(1){
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+
+    .footer-info div:nth-last-child(-n+2){
+        width: 50%;
+    }
+
+    .copyright{
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1.5rem;
+    }
+
+    .copyright > div{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        display: none !important;
+    }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .boo-container{
+        --bs-gutter-x: 3rem;
+    }
+
+    footer{
+        --footer-pt: 11.25rem;
+    }
+
+    .footer-list {
+        --infolink-fz: 2rem;
+    }
+
+    .footer-info{
+        padding-bottom: 6.5rem;
+    }
+}
+
+@media (max-width: 992px){
+    .paola-container{
+        flex-direction: column;
+    }
+
+    .paola{
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .paola{
+        height: 33rem;
+    }
+}
+
+@media (max-width: 1399.98) {
+    .boo-container{
+        width: 100%;
+    }
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .boo-container{
+        max-width: 120rem;
+    }
+
+    .footer-info{
+        padding-bottom: 9.75rem;
+    }
+
+    .paola{
+        height: 36rem;
+    }
+}
